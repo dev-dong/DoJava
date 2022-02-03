@@ -1,4 +1,4 @@
-package sec01_set.EX03;
+package sec02_set.EX03;
 
 import java.util.*;
 

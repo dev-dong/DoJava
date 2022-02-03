@@ -1,4 +1,4 @@
-package sec01_set.EX01;
+package sec02_set.EX01;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,5 +1,6 @@
-package sec01_set.EX05;
+package sec02_set.EX05;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 class MyClass {
@@ -62,7 +63,7 @@ public class TreeSetMethod_2 {
 //        treeSet3.add(myClass2);
 //        System.out.println(treeSet3.toString()); // ClassCastException 예외발생 - 데이터를 추가하는 과정에서 오류가 발생. treeSet에서 add할 때 크기대로 데이터를 넣는데 myClass1에서 크기비교를 못하기 때문에 예외발생
 
-        //#4. MyComparableClass 객체 크기 비교 - 크기비교를 할 수 없는 객체는 treeSet에 저장할 수 없다.
+        //#4. MyComparableClass 객체 크기 비교 방법#1 - 크기비교를 할 수 없는 객체는 treeSet에 저장할 수 없다.
         TreeSet<MyComparableClass> treeSet4 = new TreeSet<MyComparableClass>();
         MyComparableClass mycomparableClass1 = new MyComparableClass(2, 5);
         MyComparableClass mycomparableClass2 = new MyComparableClass(3, 3);
@@ -73,5 +74,23 @@ public class TreeSetMethod_2 {
             System.out.println(mcc.data1);
         }
         System.out.println(treeSet4.toString());
+
+        //#5. MyClass 객체 크기 비교 방법#2
+        TreeSet<MyClass> treeSet5 = new TreeSet<MyClass>(new Comparator<MyClass>() { // Comparator 인터페이스
+            @Override
+            public int compare(MyClass o1, MyClass o2) {
+                if (o1.data1 < o2.data1) return -1;
+                else if (o1.data1 == o2.data1) return 0;
+                else return 1;
+            }
+        });
+
+        MyClass myClass1 = new MyClass(2, 5);
+        MyClass myClass2 = new MyClass(3, 3);
+        treeSet5.add(myClass1);
+        treeSet5.add(myClass2);
+        for(MyClass mcc : treeSet5) {
+            System.out.println(mcc.data1);
+        }
     }
 }

@@ -1,4 +1,4 @@
-package sec01_set.EX04;
+package sec02_set.EX04;
 
 import java.util.NavigableSet;
 import java.util.SortedSet;
