@@ -17,6 +17,6 @@ class MyRunnable implements Runnable {
 public class Quiz02 {
     public static void main(String[] args) {
         Thread thread1 = new Thread(new MyRunnable());
-        thread1.start();
+        thread1.start(); // 스레드 시작
     }
 }
