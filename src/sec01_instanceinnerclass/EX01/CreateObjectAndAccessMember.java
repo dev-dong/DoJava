@@ -1,4 +1,4 @@
-package sec01.instanceinnerclass.EX01;
+package sec01_instanceinnerclass.EX01;
 
 class A {
     public int a = 3;

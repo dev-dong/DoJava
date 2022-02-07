@@ -1,4 +1,4 @@
-package sec02.staticinnerclass.EX01;
+package sec02_staticinnerclass.EX01;
 
 class A {
     int a = 3;
