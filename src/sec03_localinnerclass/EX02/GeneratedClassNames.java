@@ -1,4 +1,4 @@
-package sec03.localinnerclass.EX02;
+package sec03_localinnerclass.EX02;
 
 // 저장 시 자동 컴파일
 class A {

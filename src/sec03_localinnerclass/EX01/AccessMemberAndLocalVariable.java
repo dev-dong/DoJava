@@ -1,4 +1,4 @@
-package sec03.localinnerclass.EX01;
+package sec03_localinnerclass.EX01;
 
 /**
  * 클래스안에 정의되는 변수는 필드
