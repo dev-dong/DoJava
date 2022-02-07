@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 // HashMap과 완전하게 동일하다. 차이점은 Hashtable은 멀티쓰레드에 안전하다. 내부적으로 중요 메소드들이 동기화(synchronize) 되어져 있기 때문에.
+// 입력이 어떻게 들어가던지 간에 출력이 마음대로 나온다. key가 HashSet으로 관리되기 때문이다.
 public class HashTableMethod {
     public static void main(String[] args) {
         Map<Integer, String> hTable1 = new Hashtable<>();
