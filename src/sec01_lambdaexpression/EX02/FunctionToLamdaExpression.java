@@ -1,5 +1,10 @@
 package sec01_lambdaexpression.EX02;
 
+/*
+* 함수적 인터페이스 : 메서드가 1개만 있는 인터페이스
+* 함수적인터페이스만 람다식으로 표현이 가능하다.
+* 메서드가 여러개일 경우 람다식으로 표현이 불가능하다. 생략을 하였을 때 어떤 메서드인지 구별을 못하기 때문에
+* */
 interface A { // 입력X 리턴X
     void method1();
 }
@@ -20,7 +25,7 @@ interface D { // 입력O 리턴O
 public class FunctionToLamdaExpression {
     public static void main(String[] args) {
 
-        //인터페이스의 함수 구현 --> 람다식
+        //함수적 인터페이스의 함수 구현 --> 람다식
         //#1. 입력X 리턴X
         //@1-1 익명이너클래스 방식
         A a1 = new A() {
